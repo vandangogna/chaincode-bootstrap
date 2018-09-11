@@ -10,7 +10,7 @@ import (
 // Main
 // ===================================================================================
 func main() {
-	err := shim.Start(new(BootstrapChaincode))
+	err := shim.Start(new(Component3Chaincode))
 	if err != nil {
 		fmt.Printf("Error starting Bootstrap chaincode: %s", err)
 	}

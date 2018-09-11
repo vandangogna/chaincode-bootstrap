@@ -10,22 +10,22 @@ import (
 	pb "github.com/hyperledger/fabric/protos/peer"
 )
 
-//BootstrapChaincode chaincode
-type BootstrapChaincode struct {
+//Component3Chaincode chaincode
+type Component3Chaincode struct {
 	folder1.F1Chaincode
 	folder2.F2Chaincode
 	folder3.F3Chaincode
 }
 
 // Init chaincode
-func (t *BootstrapChaincode) Init(stub shim.ChaincodeStubInterface) pb.Response {
-	fmt.Println("########### BootstrapChaincode Init ###########")
+func (t *Component3Chaincode) Init(stub shim.ChaincodeStubInterface) pb.Response {
+	fmt.Println("########### Component3Chaincode Init ###########")
 	return shim.Success(nil)
 }
 
 // Invoke chaincode functions
-func (t *BootstrapChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
-	fmt.Println("########### BootstrapChaincode Invoke ###########")
+func (t *Component3Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
+	fmt.Println("########### Component3Chaincode Invoke ###########")
 	function, args := stub.GetFunctionAndParameters()
 	switch function {
 	case "Method1":
@@ -47,7 +47,7 @@ func (t *BootstrapChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Respons
 }
 
 //Method1 retrieves the citizen data, including any of its eligibilities and enrollments for all citizens
-func (t *BootstrapChaincode) Method1(stub shim.ChaincodeStubInterface, args []string) pb.Response {
+func (t *Component3Chaincode) Method1(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	fmt.Println("Method1() called successfully")
 	return shim.Success([]byte("Method1() called successfully"))
 }
