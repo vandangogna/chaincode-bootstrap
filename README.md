@@ -1,5 +1,3 @@
-[![Build Status - Master](https://travis-ci.org/IBM-Blockchain-Starter-Kit/chaincode-bootstrap.svg?branch=master)](https://travis-ci.org/IBM-Blockchain-Starter-Kit/chaincode-bootstrap/builds)
-
 # Scaffolding repository for use in Blockchain Starter Kit
 
 ## Chaincode Development Instructions
