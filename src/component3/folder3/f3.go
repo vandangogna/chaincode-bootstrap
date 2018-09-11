@@ -11,7 +11,7 @@ import (
 type F3Chaincode struct {
 }
 
-// F3Method1 returns a hello message from the current method
+// F3Method1 returns a successful message from the current method
 func (t *F3Chaincode) F3Method1(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	message := fmt.Sprintf("F3Method1 - chaincode method called successfully")
 	fmt.Println(message)
