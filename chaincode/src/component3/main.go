@@ -16,3 +16,7 @@ func main() {
 	}
 
 }
+
+//Download entire src.
+//make sure gopath includes '/Users/.../go:/Users/....../my-forked-chaincode-bootstrap/chaincode'
+//go build \ test should now work.
