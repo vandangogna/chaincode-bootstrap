@@ -13,7 +13,7 @@ type F2Chaincode struct {
 
 // F2Method1 returns a hello message from the current method
 func (t *F2Chaincode) F2Method1(stub shim.ChaincodeStubInterface, args []string) pb.Response {
-	message := fmt.Sprintf("F2Method1 - chaincode method called sucessfully")
+	message := fmt.Sprintf("F2Method1 - chaincode method called successfully")
 	fmt.Println(message)
 	return shim.Success([]byte(message))
 }
