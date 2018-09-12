@@ -1,10 +1,10 @@
 package main
 
 import (
+	"cc1/folder1"
+	"cc1/folder2"
+	"cc1/folder3"
 	"fmt"
-	"my-forked-chaincode-bootstrap/chaincode/cc1/folder1"
-	"my-forked-chaincode-bootstrap/chaincode/cc1/folder2"
-	"my-forked-chaincode-bootstrap/chaincode/cc1/folder3"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	pb "github.com/hyperledger/fabric/protos/peer"
