@@ -2,30 +2,30 @@ package main
 
 import (
 	"fmt"
-	"my-forked-chaincode-bootstrap/chaincode/component3/folder1"
-	"my-forked-chaincode-bootstrap/chaincode/component3/folder2"
-	"my-forked-chaincode-bootstrap/chaincode/component3/folder3"
+	"my-forked-chaincode-bootstrap/chaincode/cc1/folder1"
+	"my-forked-chaincode-bootstrap/chaincode/cc1/folder2"
+	"my-forked-chaincode-bootstrap/chaincode/cc1/folder3"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	pb "github.com/hyperledger/fabric/protos/peer"
 )
 
-//Component3Chaincode chaincode
-type Component3Chaincode struct {
+//CC1Chaincode chaincode
+type CC1Chaincode struct {
 	folder1.F1Chaincode
 	folder2.F2Chaincode
 	folder3.F3Chaincode
 }
 
 // Init chaincode
-func (t *Component3Chaincode) Init(stub shim.ChaincodeStubInterface) pb.Response {
-	fmt.Println("########### Component3Chaincode Init ###########")
+func (t *CC1Chaincode) Init(stub shim.ChaincodeStubInterface) pb.Response {
+	fmt.Println("########### CC1Chaincode Init ###########")
 	return shim.Success(nil)
 }
 
 // Invoke chaincode functions
-func (t *Component3Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
-	fmt.Println("########### Component3Chaincode Invoke ###########")
+func (t *CC1Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
+	fmt.Println("########### CC1Chaincode Invoke ###########")
 	function, args := stub.GetFunctionAndParameters()
 	switch function {
 	case "Method1":
@@ -47,7 +47,7 @@ func (t *Component3Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Respon
 }
 
 //Method1 retrieves the citizen data, including any of its eligibilities and enrollments for all citizens
-func (t *Component3Chaincode) Method1(stub shim.ChaincodeStubInterface, args []string) pb.Response {
+func (t *CC1Chaincode) Method1(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	fmt.Println("Method1() called successfully")
 	return shim.Success([]byte("Method1() called successfully"))
 }
