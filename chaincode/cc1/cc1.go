@@ -46,7 +46,7 @@ func (t *CC1Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 	return shim.Error(errorMsg)
 }
 
-//Method1 retrieves the citizen data, including any of its eligibilities and enrollments for all citizens
+//Method1 returns a successful message from the current method
 func (t *CC1Chaincode) Method1(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	fmt.Println("Method1() called successfully")
 	return shim.Success([]byte("Method1() called successfully"))
